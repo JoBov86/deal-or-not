@@ -19,7 +19,6 @@ const con = document.querySelector(".game-area");
 const main = document.querySelector(".main");
 const leftSide = document.querySelector(".left-side");
 const rightSide = document.querySelector(".right-side");
-const myBox = document.querySelector(".my-box");
 document.querySelector(".deal").addEventListener("click", makeDeal);
 document.querySelector(".no-deal").addEventListener("click", makeDeal);
 document.querySelector(".close").addEventListener("click", closePopUp);
@@ -57,7 +56,6 @@ function endGame() {
       rightSide.removeChild(sideVal[x]);
     }
   }
-  myBox.innerHTML = "";
 }
 
 function makeDeal(e) {
@@ -204,7 +202,6 @@ function checkCase(e) {
       );
       boxOpenSound.play();
       boxOpenSound.currentTime = 0;
-      myBox.innerHTML = `Your Box: #${e.target.ind}`;
     } else {
       e.target.classList.remove("chosen");
       e.target.classList.add("muted");
@@ -213,7 +210,7 @@ function checkCase(e) {
         holdingArray.splice(ind, 1);
       }
       let halfWay = vals[Math.floor(vals.length / 2)];
-      if (e.target.val <= halfWay) {
+      if (e.target.val < halfWay) {
         message += "<h1>Well Done</h1>";
       } else {
         message += "<h1>Unlucky</h1>";

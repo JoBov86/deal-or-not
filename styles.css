@@ -2,8 +2,12 @@ body {
   font-family: sans-serif;
   overflow: hidden;
   background-image: url("game-show-bg-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
 }
+
+/* TYPOGRAPHY */
 
 .game-title {
   font-family: Arial, Helvetica, sans-serif;
@@ -12,42 +16,17 @@ body {
   color: whitesmoke;
 }
 
-.my-box {
+.modal-body,
+.modal-body2 {
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgb(161, 6, 6);
-  background-color: rgba(245, 245, 245, 0.712);
-
-  margin: 0 auto;
+  font-size: 3rem;
 }
 
-.btn {
-  border: 2px solid white;
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 15%;
-
-  padding: 10px 15px;
-  border-radius: 25px;
-  cursor: pointer;
+p,
+div {
+  font-weight: 700;
 }
-
-.btn:hover {
-  background-color: rgb(25, 25, 25);
-  box-shadow: rgb(25, 25, 25) 2px 8px;
-}
-
-.start {
-  position: absolute;
-  bottom: 10%;
-  left: 40%;
-  z-index: 1;
-}
+/* LAYOUT AND STYLING  */
 
 .game-area {
   width: 60%;
@@ -117,24 +96,11 @@ body {
   transform: none;
 }
 
-.close {
-  color: #333;
-  float: right;
-  font-size: 3rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: red;
-}
-
 .modal1,
 .modal2 {
   display: none;
   position: fixed;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.788);
+  background-color: rgba(0, 0, 0, 0.671);
   width: 100%;
   height: 100%;
   left: 0;
@@ -145,10 +111,10 @@ body {
 
 .modal-content {
   background-image: url("game-show-bg-img.jpg");
-  background-color: rgba(92, 86, 86, 0.61);
+  background-color: rgba(255, 254, 254, 0.63);
   background-blend-mode: lighten;
   background-size: cover;
-  color: white;
+  color: black;
   margin: auto;
   margin-top: 100px;
   min-height: 200px;
@@ -158,10 +124,74 @@ body {
   text-align: center;
 }
 
-.modal-body,
-.modal-body2 {
+.left-side div {
+  background-color: blue;
+}
+
+.right-side div {
+  background-color: red;
+}
+
+.muted {
+  color: rgba(90, 88, 88, 0.315);
+  border: 2px solid #eee;
+  background-color: rgba(245, 245, 245, 0.37);
+}
+
+.muted:hover {
+  transform: none;
+}
+
+.chosen {
+  background-color: rgba(100, 6, 22, 0.5);
+  border: rgb(25, 25, 25) 5px solid;
+}
+
+.chosen:hover {
+  transform: none;
+}
+
+.left-side .muted,
+.right-side .muted {
+  color: rgba(90, 88, 88, 0.315);
+  border: 1px solid #eee;
+  background-color: rgba(245, 245, 245, 0.37);
+}
+
+/* BUTTONS */
+.btn {
+  border: 5px solid black;
+  background-color: rgb(197, 197, 197);
+  box-shadow: rgb(97, 96, 96) 2px 8px 2px;
+  font-size: 1.5rem;
+  color: rgb(25, 25, 25);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   text-align: center;
-  font-size: 2rem;
+  width: 15%;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 5px solid white;
+  color: white;
+  background-color: rgb(25, 25, 25);
+  box-shadow: rgb(25, 25, 25) 2px 8px 2px;
+}
+
+.start {
+  position: absolute;
+  bottom: 4%;
+  left: 40%;
+  z-index: 1;
+}
+
+.accept-decline-btns {
+  display: flex;
+  justify-content: center;
 }
 
 .deal {
@@ -196,41 +226,14 @@ body {
   height: 10%;
 }
 
-.accept-decline-btns {
-  display: flex;
-  justify-content: center;
+.close {
+  color: black;
+  float: right;
+  font-size: 6rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.left-side div {
-  background-color: blue;
-}
-
-.right-side div {
-  background-color: red;
-}
-
-.muted {
-  color: rgba(90, 88, 88, 0.315);
-  border: 2px solid #eee;
-  background-color: rgba(245, 245, 245, 0.37);
-}
-
-.muted:hover {
-  transform: none;
-}
-
-.chosen {
-  background-color: rgba(100, 6, 22, 0.658);
-  border: rgb(25, 25, 25) 5px solid;
-}
-
-.chosen:hover {
-  transform: none;
-}
-
-.left-side .muted,
-.right-side .muted {
-  color: rgba(90, 88, 88, 0.315);
-  border: 1px solid #eee;
-  background-color: rgba(245, 245, 245, 0.37);
+.close:hover {
+  color: red;
 }
