@@ -22,6 +22,9 @@ body {
   font-size: 2rem;
 }
 
+.modal-body {
+  line-height: 1.5;
+}
 p,
 div {
   font-weight: 700;
@@ -31,6 +34,11 @@ div {
 .game-area {
   width: 60%;
 
+  margin: auto;
+}
+
+.modal-body h1,
+.modal-body p {
   margin: auto;
 }
 
@@ -177,7 +185,7 @@ div {
 
 .btn:hover {
   border: 5px solid white;
-  color: white;
+  color: whitesmoke;
   background-color: rgb(25, 25, 25);
   box-shadow: rgb(25, 25, 25) 2px 8px 2px;
 }
@@ -211,7 +219,7 @@ div {
   box-shadow: black 2px 2px;
 }
 .offers {
-  color: white;
+  color: whitesmoke;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-weight: bold;
@@ -227,7 +235,7 @@ div {
 }
 
 .close {
-  color: black;
+  color: whitesmoke;
   float: right;
   font-size: 6rem;
   font-weight: bold;

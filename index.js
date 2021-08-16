@@ -84,7 +84,7 @@ function makeDeal(e) {
       loseSound.play();
     }
     if (sel > offer) {
-      popUp(`<div> Hurray, Your Box Contains <h1>£${sel}</h1></div>`);
+      popUp(`<div>Good Choice, Your Box Contains <h1>£${sel}</h1></div>`);
     }
     winSound.play();
 
